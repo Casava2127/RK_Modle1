@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sample Form</title>
+  </head>
+  <body>
+    <h2>Contact Form</h2>
+
+    <form>
+      <!-- Trường nhập tên -->
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <!-- Trường nhập email -->
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <!-- Trường chọn giới tính -->
+      <label for="gender">Gender:</label><br />
+
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">Male</label><br />
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label><br /><br />
+
+      <!-- Trường chọn sở thích -->
+      <label for="hobbies">Hobbies:</label><br />
+
+      <input type="checkbox" id="reading" name="hobbies" value="reading" />
+      <label for="reading">Reading</label><br />
+      <input type="checkbox" id="sports" name="hobbies" value="sports" />
+      <label for="sports">Sports</label><br /><br />
+
+      <!-- Trường chọn quốc gia -->
+      <label for="country">Country:</label><br />
+
+      <select id="country" name="country">
+        <option value="us">United States</option>
+        <option value="ca">Canada</option>
+        <option value="uk">United Kingdom</option></select
+      ><br /><br />
+
+      <!-- Trường nhập nội dung -->
+      <label for="message">Message:</label><br />
+      <textarea
+        id="message"
+        name="message"
+        rows="4"
+        cols="50"
+        required
+      ></textarea
+      ><br /><br />
+
+      <!-- Nút gửi biểu mẫu -->
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Annuler" />
+    </form>
+   
+   
+  </body>
+</html>
