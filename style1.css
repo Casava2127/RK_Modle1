@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+ul {
+    /* sử dụng để loại bỏ các dấu hiệu danh sách mặc định (ví dụ: dấu chấm, dấu số) khỏi danh sách HTML. */
+    list-style: none;
+
+
+}
+
+.image img {
+    width: 100px;
+    height: 100px;
+}
+
+body {
+    background-color: #f2f3f5;
+    color: #9b9b9b;
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    /* khoang cach tren voi cac dong */
+    line-height: 1.8;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.plans {
+    margin: 30px auto;
+    width: 1150px;
+}
+
+.plans h2 {
+    color: #1f1f1f;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.plans .my-new-class {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.plans .left-group {
+    float: left;
+    margin-bottom: 20px;
+    width: 400px
+}
+
+.plans .left-group .image {
+    margin-bottom: 5px;
+}
+
+.plans .left-group .image img {
+    border-radius: 10px;
+}
+
+.plans .left-group h3 {
+    color: #1f1f1f;
+    font-size: 15px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.plans .right-group {
+    float: right;
+    width: 650px;
+}
+
+.plans .right-group .info-list li {
+    border-bottom: 1px dashed #f44336;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+}
+
+.plans .right-group .info-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.plans .right-group .info-list li .image {
+    display: inline-block;
+    width: 80px;
+    margin-top: 9px;
+}
+
+.plans .right-group .info-list li .image img {
+    border-radius: 10px;
+}
+
+.plans .right-group .info-list li .detail {
+    float: right;
+    padding-top: 3px;
+    width: 520px;
+
+}
+
+.plans .right-group .info-list li .detail h3 {
+    color: #1f1f1f;
+    /* margin-bottom: 6px; */
+    /* font-size: 18px; */
+}
