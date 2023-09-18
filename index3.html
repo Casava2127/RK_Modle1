@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album ảnh</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+
+            gap: 20px 20px;
+        }
+
+        .grid-item {
+            background-color: #fff9f1;
+            border: 1px solid #edcbcb;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+            box-shadow: 5px 5px 5px rgb(184, 184, 156)
+            
+        }
+
+        img {
+            width: 100%;
+
+        }
+
+        @media screen and (min-width: 1000px) {
+            .grid-item{
+                display: none;
+            }
+            .grid-item {
+                display: flex;
+                flex-direction: column-reverse;
+               background-color: red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item"><img src="in4.img" alt="">
+            <p style="font-size: 10px;">Travel</p>
+        </div>
+        <div class="grid-item"><img src="in4.img" alt="">
+            <p style="font-size: 10px;">Travel</p>
+        </div>
+        <div class="grid-item"><img src="in4.img" alt="">
+            <p style="font-size: 10px;">Travel</p>
+        </div>
+        <div class="grid-item"><img src="in4.img" alt="">
+            <p style="font-size: 10px;">Travel</p>
+        </div>
+        <div class="grid-item"><img src="in4.img" alt="">
+            <p style="font-size: 10px;">Travel</p>
+        </div>
+        <div class="grid-item"><img src="in4.img" alt="">
+            <p style="font-size: 10px;">Travel</p>
+        </div>
+        <div class="grid-item"><img src="in4.img" alt="">
+            <p style="font-size: 10px;">Travel</p>
+        </div>
+        <div class="grid-item"><img src="in4.img" alt="">
+            <p style="font-size: 10px;">Travel</p>
+        </div>
+        <div class="grid-item"><img src="in4.img" alt="">
+            <p style="font-size: 10px;">Travel</p>
+        </div>
+    </div>
+</body>
+
+</html>

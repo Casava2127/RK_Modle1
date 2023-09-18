@@ -1,0 +1,103 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+.content{
+    width: 1000px;
+    height: 1000px;
+    margin: auto;
+    background-color:white;
+
+    position: relative;
+}
+.header{
+    width: 100%;
+    height: 30px;
+    background-color:#343A40;
+}
+.header h2{
+    color: white;
+    padding: 0px
+    /* padding-bottom: 5px; */
+}
+.exf{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.ex{
+    width: 600px;
+    height: auto;
+    margin-top: 50px;
+    text-align: center;
+  
+   
+}
+.ex p{
+    margin: 20px;
+    text-align: center;
+}
+.text{
+    display: flex;
+    justify-content: center;
+ 
+}
+.list{
+    width: 100%;
+    height: auto;
+    background-color: #F8F9FA;
+    padding-top: 30px;
+
+    /* float: left; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    position: absolute;
+    left: 0px;
+
+
+}
+.li1{
+width: 30%;
+height: 300px;
+background-color: rgb(120, 120, 129);
+/* display: inline-block; */
+border-radius: 10px;
+border-top-left-radius: 10px;
+margin-bottom: 20px;
+}
+.thum{
+    width: 100%;
+    height: 100px;
+    background-color: #55595C;
+    text-align: center;
+    padding-top: 70px;
+   
+   
+}
+.co{
+    width: 100%;
+    padding-right: 20px;
+    padding-top: 20px;
+   
+}
+.co p{
+    font-size: 13px;
+    margin-left: 3px;
+}
+.but{
+    margin: 10px;
+    
+}
+.but button{
+    width: 40px;
+     height: 20px;
+     border-radius: 5px;
+     border: #8a8e91 solid 2px;
+}
+i{
+    display: inline-block;
+}
