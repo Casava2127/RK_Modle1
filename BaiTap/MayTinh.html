@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Máy tính đơn giản Bài 3</title>
+  </head>
+  <body>
+    <h1>Máy tính đơn giản Bài 3</h1>
+    <input type="text" id="kq" readonly />
+    <br />
+    <button onclick="themVaoKetQua('1')">1</button>
+    <button onclick="themVaoKetQua('2')">2</button>
+    <button onclick="themVaoKetQua('3')">3</button>
+    <button onclick="themVaoKetQua('+')">+</button>
+    <br />
+    <button onclick="themVaoKetQua('4')">4</button>
+    <button onclick="themVaoKetQua('5')">5</button>
+    <button onclick="themVaoKetQua('6')">6</button>
+    <button onclick="themVaoKetQua('-')">-</button>
+    <br />
+    <button onclick="themVaoKetQua('7')">7</button>
+    <button onclick="themVaoKetQua('8')">8</button>
+    <button onclick="themVaoKetQua('9')">9</button>
+    <button onclick="themVaoKetQua('*')">*</button>
+    <br />
+    <button onclick="themVaoKetQua('0')">0</button>
+    <button onclick="themVaoKetQua('.')">.</button>
+    <button onclick="tinhToan()">=</button>
+    <button onclick="themVaoKetQua('/')">/</button>
+    <br />
+    <button onclick="xoaKetQua()">Xóa</button>
+
+    <script>
+      function themVaoKetQua(giaTri) {
+        var ketQua = document.getElementById("kq");
+        ketQua.value += giaTri;
+      }
+
+      function tinhToan() {
+        var ketQua = document.getElementById("kq");
+        var bieuThuc = ketQua.value;
+        try {
+          var ketQuaTinhToan = eval(bieuThuc); // tính toán giá trị trong biểu thức
+          ketQua.value = ketQuaTinhToan;
+        } catch (loi) {
+          ketQua.value = "Lỗi";
+        }
+      }
+
+      function xoaKetQua() {
+        var ketQua = document.getElementById("kq");
+        ketQua.value = "";
+      }
+    </script>
+  </body>
+</html>

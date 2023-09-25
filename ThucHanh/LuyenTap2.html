@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lt2</title>
+  </head>
+  <body>
+    <script>
+      var input = prompt("Nhập tên hệ thống");
+      if(input=="Admin"){
+        var inputP = prompt("Nhập mật khẩu")
+        if(inputP=="TheMaster"){
+            alert("Welcome")
+        }else if(inputP==null){
+            alert("Canceled")
+        }else {
+            alert("Wrong password")
+        }
+      } else if(input==null) {
+        alert("Canceled")
+      }else {
+        alert("I don't know you")
+      }
+    </script>
+  </body>
+</html>

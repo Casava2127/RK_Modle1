@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var w = parseFloat(prompt("Nhập cân nặng"));
+      var h = parseFloat(prompt("Nhập chiều cao"));
+      const bmi =Math.round(w / (h * h));
+      bmi < 18.5
+        ? document.write("Cân nặng thấp")
+        : bmi < 24.9
+        ? document.write("Bình thường")
+        : bmi < 29.9
+        ? document.write("Thừa cân - Tiền Béo Phì")
+        : bmi < 34.9
+        ? document.write("Béo phì độ 1")
+        : bmi < 39.9
+        ? document.write("Béo phì độ 2")
+        : document.write("Béo phì độ 3");
+    </script>
+  </body>
+</html>

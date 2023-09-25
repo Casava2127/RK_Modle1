@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiemTraNamNhuan</title>
+</head>
+<body>
+    <script>
+        var inputY = parseInt(prompt("Nhập năm bạn muốn kiểm tra"))
+        <!--cách 1 -->
+        isLeapYear(inputY) ? document.write(inputY+" là năm nhuận") : document.write(inputY+" không là năm nhuận")
+            function isLeapYear(year) {
+                // Năm chia hết cho 4 và không chia hết cho 100
+                // hoặc năm chia hết cho 400 thì là năm nhuận
+                return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+              }
+        
+    </script>
+</body>
+</html>
