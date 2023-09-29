@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      alert("Quan");
+      var numbers = [];
+
+      while (true) {
+        var input = prompt("Nhập một số:");
+
+        if (input === null || input === "") {
+          break; // Thoát khỏi vòng lặp nếu người dùng nhấn "Cancel" hoặc chuỗi trống
+        }
+
+        var number = parseInt(input);
+
+        if (!isNaN(number)) {
+          numbers.push(number); // Thêm số vào mảng
+        } else {
+          break; // Thoát khỏi vòng lặp nếu người dùng nhập giá trị không phải là số
+        }
+      }
+
+      var sum = 0;
+      for (var i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+      }
+
+      console.log("Tổng giá trị của mảng: " + sum);
+
+      var max = Math.max.apply(null, numbers);
+      var min = Math.min.apply(null, numbers);
+
+      console.log("Giá trị lớn nhất: " + max);
+      console.log("Giá trị nhỏ nhất: " + min);
+    </script>
+  </body>
+</html>

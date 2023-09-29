@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  1 )Khai báo mảng 2 chiều
+      var arrInt = [];
+
+      // Số hàng và số cột của mảng (ví dụ:  3 hàng x 3cột)
+      var numRows = 3;
+      var numCols = 3;
+
+      // Nhập giá trị cho mảng từ bàn phím
+      for (var i = 0; i < numRows; i++) {
+        // Khai báo một hàng mới
+        var row = [];
+
+        for (var j = 0; j < numCols; j++) {
+          var inValue = parseInt(
+            prompt(
+              "Nhập giá trị cho hàng " + (i + 1) + ", cột " + (j + 1) + ":"
+            )
+          );
+          row.push(inValue);
+        }
+
+        // Thêm hàng vào mảng 2 chiều
+        arrInt.push(row);
+      }
+
+      // 2) Hiển thị mảng sau khi đã nhập giá trị
+      console.log("Mảng 2 chiều sau khi nhập giá trị:");
+      console.log(arrInt);
+      //  3) In phần tử trên biên
+      console.log("Biên");
+      for (i = 0; i < numRows; i++) {
+        for (j = 0; j < numCols; j++)
+          if (i == 0 || i == numRows - 1 || j == 0 || j == numCols - 1) {
+            console.log(arrInt[i][j]);
+          }
+      }
+      //In giá trị các phần tử nằm trên đường chéo chính và phụ
+      console.log("Đường chéo chính");
+      for (var i = 0; i < numRows; i++) {
+        for (j = 0; j < numCols; j++) {
+          if (i == j) {
+            console.log(arrInt[i][j]);
+          }
+        }
+      }
+      console.log("Đường chéo phụ");
+      for (var i = 0; i < numRows; i++) {
+        for (j = 0; j < numCols; j++) {
+          if (i + j == arrInt.length - 1) {
+            console.log(arrInt[i][j]);
+          }
+        }
+      }
+
+      // Mảng tăng dần theo cột
+      // nhận định ước tính 3 vòng lặp -> 1-xác định cột, 1 xác định hàng, 1 để so sánh
+      for (var i = 0; i < numCols; i++) {
+        console.log("Sắp xếp cột thứ " + i);
+        for (var j = 0; j < numRows - 1; j++) {
+          console.log("Sắp xếp hàng thứ " + j + " của cột thứ " + i);
+          for (var k = 0; k < numRows - 1 - j; k++) {
+            if (arrInt[k][i] > arrInt[k + 1][i]) {
+              var t = arrInt[k][i];
+              arrInt[k][i] = arrInt[k + 1][i];
+              arrInt[k + 1][i] = t;
+            }
+          }
+        }
+      }
+      console.log(arrInt);
+    </script>
+  </body>
+</html>

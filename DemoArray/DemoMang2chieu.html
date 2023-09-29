@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Khai báo mảng 2 chiều
+var arrInt = [
+[5, 2, 8],
+[1, 6, 3],
+[7, 4, 9]
+];
+console.log("Mảng sau khi sắp xếp")
+// Sắp xếp mảng tăng dần theo cột (không sử dụng sort())
+/**
+function sortByColumnAscending(arr) {
+var numRows = arr.length;
+var numCols = arr[0].length;
+
+for (var col = 0; col < numCols; col++) {
+    for (var i = 0; i < numRows - 1; i++) {
+        for (var j = 0; j < numRows - i - 1; j++) {
+            if (arr[j][col] > arr[j + 1][col]) {
+                // Hoán đổi hai phần tử
+                var temp = arr[j][col];
+                arr[j][col] = arr[j + 1][col];
+                arr[j + 1][col] = temp;
+            }
+        }
+    }
+}
+}
+*/
+
+// Sắp xếp mảng tăng dần theo cột
+sortByColumnAscending(arrInt);
+
+// Hiển thị mảng sau khi sắp xếp
+console.log("Mảng sau khi sắp xếp tăng dần theo cột:");
+console.log(arrInt);
+
+    </script>
+</body>
+</html>

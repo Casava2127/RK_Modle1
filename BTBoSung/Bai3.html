@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      var arr = ["Jazz", "Blues"];
+      console.log("Thêm Rock vào");
+      arr.push("Rock");
+      console.log(arr);
+      if (arr.length % 2 !== 0) {
+        console.log("Phần tử chính giữa là: " + arr[Math.ceil(arr.length / 2)]);
+        arr[Math.ceil(arr.length / 2)] = "Classics";
+        console.log("Mảng sau khi thay thế " + arr);
+      }
+
+      //
+ 
+
+// Xóa phần tử đầu tiên của mảng
+arr.shift();
+
+// Hiển thị mảng sau khi xóa
+console.log("Mảng sau khi xóa phần tử đầu tiên:");
+console.log(arr);
+
+// Thêm phần tử "Rap" và "Reggae" vào đầu mảng
+arr.unshift("Rap", "Reggae");
+
+// Hiển thị mảng sau khi thêm
+console.log("Mảng sau khi thêm phần tử vào đầu:");
+console.log(arr);
+
+    </script>
+  </body>
+</html>
