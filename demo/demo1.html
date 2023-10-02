@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: none;
+        margin: 0px;
+        padding: 0px;
+      }
+      main {
+        margin-left: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        border: 2px solid black;
+      }
+      fieldset {
+        border: 2px solid black;
+        padding: 2px;
+      }
+      legend{
+        padding: 5px;
+        margin-left: 20px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <script src="demo1.js"></script>
+    <header>
+      <h1>Funtion</h1>
+    </header>
+    <main>
+      <fieldset>
+        <legend>Funtion</legend>
+        <h3>Ví dụ</h3>
+
+        <button onclick="ex_1()">click</button>
+        <button onclick="ex_2()">click Sum</button>
+      </fieldset>
+    </main>
+  </body>
+</html>
