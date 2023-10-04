@@ -175,3 +175,27 @@ function timNsoNguyenTo(n){
 } 
 console.log(timNsoNguyenTo(6))
 
+// Bài 6. Cho 1 mảng gồm tên của 5 học viên. Hãy viết function sắp xếp lại thứ tự các học viên theo bảng chữ cái và in ra màn hình danh sách học viên.
+
+var arrName1 = ['Anh', 'Cung','Quan', 'Duy','Bình','Tâm', 'Sương','Anh']
+var t 
+console.log((arrName1[1].charCodeAt(0)));
+function  arrangeName(arrName){
+for( var i =0;i<arrName.length-1;i++){
+    for( var j=i+1;j<arrName.length;j++){
+        if(arrName[i].charCodeAt(0)>arrName[j].charCodeAt(0)){
+            t = arrName[j]
+            arrName[j]=arrName[i];
+            arrName[i]=t;
+        }
+
+    }
+   
+}
+return arrName;
+}
+console.log(arrangeName(arrName1))
+
+// sắp xếp họ và tên 
+arrName2=["Nguyen Quan", 'Nguyen Anh', 'Nguyen Minh Anh']
+console.log(arrName2.sort());
