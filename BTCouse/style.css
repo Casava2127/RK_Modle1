@@ -209,7 +209,7 @@ button {
 .nav-black {
     background-color: rgb(97, 111, 233);
     width: 60%;
-    max-width: 480px;
+    max-width: 350px;
     min-width: 320px;
     transition-delay: 0.4s;
 }
