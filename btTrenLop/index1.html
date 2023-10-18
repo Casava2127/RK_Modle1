@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Nhập tên người dùng" id="userName">
+    <button onclick="addName()" id="add">ADD</button>
+    <button onclick="deleteData()" id="deleteData">DELETE</button>
+    <p id="result1"></p>
+    <script>
+function addName(){
+    var valueIn = document.getElementById('userName')
+    localStorage.setItem("userName1",JSON.stringify(valueIn.value))
+    renderName();
+}
+function deleteData(){
+  //  localStorage.clear('userName1')
+  localStorage.removeItem('userName1')
+    if(localStorage.getItem('userName1') == null ){
+        document.getElementById('add').innerText="ADD"
+        document.getElementById('result1').innerHTML=""
+    }
+}
+renderName();
+function renderName(){
+    const resultName = document.getElementById('result1')
+    const userName1 = JSON.parse(localStorage.getItem("userName1"));
+    if(localStorage.getItem('userName1') != null ){
+         document.getElementById('add').innerHTML="Change"
+    }
+    resultName.innerText=userName1;
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Dăng Ký Tài Khoản</title>
+ <style>
+    /* Định dạng cơ bản cho form */
+#Form {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Định dạng cho label */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Định dạng cho input */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Định dạng cho button */
+button {
+    background-color: #3460e1;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5781da;
+}
+
+/* Định dạng cho p */
+p {
+    margin-top: 10px;
+    color: #3460e1;
+    font-weight: bold;
+}
+
+ </style>
+</head>
+<body>
+    <form id="Form">
+        <label for="username">Tên người dùng:</label>
+        <input type="text" id="username" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br>
+    
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" required><br>
+    
+        <button type="submit" >Đăng ký</button>
+        <!-- <button type="submit" onclick="clearSt()">Xóa</button> -->
+        <p id="show"></p>
+
+    </form>
+    <script>
+        const getUser = ()=>{
+        var student = localStorage.getItem('accounts1');
+        student = student ? JSON.parse(student):[];
+        return student;
+        }
+        const showStu= () =>{
+
+        }
+        const checkUser = (email) =>{
+            const checkuser = Object.keys(localStorage)
+            console.log(checkUser)
+
+        }
+        var stdForm = document.getElementById('Form');
+
+        stdForm.addEventListener("submit", function(e){
+            e.preventDefault();
+
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var password = document. getElementById('password').value;
+        
+  
+            var user =  {
+                username:username,
+                email: email,
+                password:password
+            };
+
+            student.push(user)
+            localStorage.setItem("accounts1", JSON.stringify(student));
+            localStorage.setItem("accounts1", JSON.stringify(student))
+
+
+        });
+     //  document.getElementById('show').innerHTML=JSON.stringify(localStorage.getItem('accounts1'))
+     
+    </script>
+</body>
+</html>
