@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Quản lý học viên</h1>
+    <form id="stdForm">
+        <label for="fullName">Họ và tên:</label>
+        <input type="text" id="fullName" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <br>
+        <label for="phoneNumber">Số điện thoại:</label>
+        <input type="tel" id="phoneNumber" pattern="[0-9]{10}" required>
+        <br>
+        <label for="hometown">Quê quán:</label>
+        <input type="text" id="hometown" required>
+        <br>
+        <label for="gender">Giới tính:</label>
+        <select id="gender">
+            <option value="Nam">Nam</option>
+            <option value="Nữ">Nữ</option>
+        </select>
+        <br>
+        <button type="submit">Lưu lại</button>
+        <button id="clearButton">Clear Form</button>
+        <button id="clearDataButton">Clear Data</button>
+
+
+    </form>
+    
+    <h2>Danh sách học viên</h2>
+    
+    <ul id="studentList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>

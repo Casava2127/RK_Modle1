@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DemoEvent</title>
+  </head>
+  <body>
+    <h1 onclick="console.log(this.innerText)">DOM Event1 - Attribute Events</h1>
+    <h1 onclick="console.log(this)">
+      <!-- <span>DOM Event2</span> -->
+      <span onclick="console.log(this)">DOM Event2</span>
+      <!-- kết quả là 2 thằng chị gọi  theo thứ tự từ trong ra ngoài-> nổi bọt -->
+    </h1>
+    <!-- nhấn vào text của thằng con -> lan ra cha, quay lại khái niệm nổi bot -->
+
+    <!-- <h1 onmouseover="console.log(Math.random())" >DOM Event</h1> -->
+
+    <h3>Assign event using the element node 0</h3>
+    <h3>Assign event using the element node 1</h3>
+    <h3>Assign event using the element node 2</h3>
+    <h3>Assign event using the element node 3</h3>
+    <!-- 
+    // 1.Input / select 
+    // 2.key up/ down -->
+    <!-- <label for="">1</label>
+    <input type="text" />
+
+    <label for="">2</label>
+    <input type="checkbox" />
+
+    <select>
+      <option>1</option>
+      <option value="">2</option>
+      <option value="">3</option>
+    </select>
+    <br /> -->
+    <!-- // preventDefault        -->
+    <a
+      href="https://fullstack.edu.vn/learning/html-css?id=278ad346-397b-4818-81f9-be421edbbdd4"
+      >f8</a
+    >
+    <br />
+    <a href="https://www.w3schools.com/js/js_htmldom_events.asp">w3</a>
+
+
+    <div class="divT" onclick="console.log=('DIV')">
+      DIV
+      <button onclick="console.log('Click Me')">Click Me</button>
+    </div>
+
+    <script src="script2.js"></script>
+  </body>
+</html>

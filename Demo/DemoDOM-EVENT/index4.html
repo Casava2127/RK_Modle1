@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đồng hồ con gà</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0px;
+            background-color: antiquewhite;
+        }
+        .clock{
+            font-size: 24px;
+
+        }
+        .chicken-container{
+            position: relative;
+            margin-top: 20px;
+            cursor: pointer; /** thay đỏi biểu tượng con trỏ chột khi đi qua một phần tửHTML*/
+        }
+        .chicken{
+            width: 50px;
+            height: 50px;
+            background-color: orange;
+            border:  2px solid #fff;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .chicken:hover{
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <span id="time">00:00:00</span>
+    </div>
+    <div class="chicken-container">
+        <div class="chicken"></div>
+    </div>
+    <div class="score"><span class="" id="score">0</span></div>
+    <script>
+        const timeElement = document.getElementById('time');
+        const chickenElement = document.querySelector(".chicken");
+        const scoreElement = document.getElementById('score');
+
+        // time
+
+        let secondsRemaining = 300; // 5p
+        let score = 0;
+        function updateClock(){
+            const hours = Math.floor(secondsRemaining / 3600);
+            const minutes = Math.floor((secondsRemaining%3600) /60);
+            const seconds =secondsRemaining % 60 ;
+            timeElement.textContent = `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+        }
+      
+
+        function tick() {
+            if(secondsRemaining<0){
+                clearInterval(clockInterval);
+                alert(" Đã hết thời gian");
+            }else {
+                secondsRemaining--;
+                updateClock();
+            }
+        }
+        
+     
+        const clockInterval = setInterval(tick,1000);
+        updateClock();
+// chicken
+function getRandomPosition(){
+    const maxX = window.innerWidth-50
+    const maxY = window.innerHeight-50
+    const x = Math.floor(Math.random()*maxX);
+    const y = Math.floor(Math.random()*maxY);
+    return{ x, y};
+}
+function showChicken(){
+    const position = getRandomPosition();
+    chickenElement.style.left= position.x +"px";
+    chickenElement.style.left= position.y +"px";
+    chickenElement.style.display="block";
+}
+ chickenElement.addEventListener("mouseover", function(){
+    chickenElement.style.border = "2px solid green"
+ });
+ chickenElement.addEventListener("click", function(){
+    score+=10;
+    scoreElement.textContent=score;
+    chickenElement.style.display="none"
+    showChicken();
+ });
+ showChicken();
+        
+    </script>
+    
+</body>
+</html>
