@@ -1,0 +1,14 @@
+  dùng  include string -> để dùng cho mục search
+ truthy falthy
+
+ REgis
+ login
+
+ products 
+  list
+  search
+  gio hang 
+    luu vao gio hang ( dùng key)
+    khi logout thi phai clear gio hang 
+
+    regex patterm -> chuỗi nhập vào có thõa mãn hay không ( vs dùng cho email)

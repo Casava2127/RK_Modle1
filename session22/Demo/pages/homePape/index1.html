@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coursera</title>
+  <link rel="stylesheet" href="/session22/Demo/common/css/style1.css" />
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+</head>
+<header id="header">
+  <nav>
+
+
+    <button class="nav-btn open-btn">
+      <i class="fas fa-bars" style="padding-top: 10px;"></i>
+    </button>
+    <div class="nav nav-blue">
+      <div class="nav nav-white">
+        <div class="nav nav-grey">
+          <button class="nav-btn close-btn">
+            <i class="fas fa-times"></i>
+          </button>
+
+          <ul class="list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#" id="coursesU" my-cousera="">Courses</a></li>
+
+            <li><a href="#">Categories</a></li>
+            <li>
+              <ul>
+                <li><a href="#">Feedback / Suggest a Course</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="logo"><img src="/session22/img/cou.img" alt="" /></div>
+    <ul>
+      <li><a class="active" href="">Home</a></li>
+      <li><a href="#portfolio_section">Portfolio</a></li>
+      <li><a href="#team_section">Team</a></li>
+      <li><a href="#services_section">Services</a></li>
+      <li><a href="#contactus_section">Contact</a></li>
+    </ul>
+    <div class="srch">
+      <input type="text" class="search" placeholder="Search here..." /><i style="font-size: 18px; margin-top: 3px;"
+        class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <!-- get started -->
+    <i style="display: none; margin-bottom: 10px; font-size: 25px;
+        " id="iconLogin" class="fa-solid fa-universal-access"></i>
+    <div id="myAccount" style="
+      width: 100px;
+      padding-left: 0px;
+      margin-left: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+     
+      display: none; ">
+      <select class="form-select" style="width: 150px; margin-bottom: 10px;" aria-label="Default select example"
+        id="select1">
+        <!-- <i class="fa-solid fa-universal-access"></i> -->
+        <option selected>
+          Information
+        </option>
+        <option value="1">My Account</option>
+        <option value="2">Change Password</option>
+        <option value="3" id="logOut">Log Out</option>
+      </select>
+    </div>
+
+    <div class="dropdown" id="dropdown" style="width: 200px; font-size: 8px; margin: 0px; padding: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-right: 20px;
+        margin-right: 0px; ">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
+        data-bs-auto-close="outside" style="margin-bottom: 13px;">
+        Get Started
+      </button>
+
+      <form class="dropdown-menu p-4" id="signUpForm">
+        <div class="mb-3">
+          <label for="exampleDropdownFormEmail2" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+        </div>
+        <div class="mb-3">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+            <label class="form-check-label" for="dropdownCheck2">
+              Remember me
+            </label>
+          </div>
+        </div>
+        <div id="message"></div>
+
+        <button type="submit" class="btn btn-primary">
+          <!-- <a href=".#login.html" style="color: rgb(18, 20, 21); width: 150px;">Sign in</a> -->
+          <span id="getSignIn">Sign In</span>
+          <i id="successIcon" style="display: none; font-size: 18px;" class="fa-solid fa-check"></i>
+        </button>
+        <br><br>
+        <p><a style="float: left;" href="/session22/Demo/pages/auth/regis/regis.html">Sing up</a></p>
+      </form>
+    </div>
+
+  </nav>
+  <div pr-include-html="/session22/Demo/common/header/headContainer.html"></div>
+</header>
+
+
+<!-- About -->
+<center>
+  <p style="font-size: 50px; padding: 100px; margin-top:60px ;">About</p>
+</center>
+<div class="diffSection" id="about_section" style="   
+display: flex;
+justify-content: center;
+align-items: center; 
+">
+
+  <div class="t1">
+    <div class="container">
+
+      <div class="block">
+
+        <div class="box">
+          <div class="shape">
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="shape">
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="shape">
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="shape">
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="box">
+          <div class="shape">
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="shape">
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="shape">
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="shape">
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="box">
+          <div class="shape">
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="shape">
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="shape">
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="shape">
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="box">
+          <div class="shape">
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="shape">
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="shape">
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="shape">
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+            <div class="side"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-content">
+    <div class="side-text">
+      <div class="image-container">
+        <!-- <img src="/nenTrang.jpg" style="width: 70%; height: 450px;" alt="Mô tả"> -->
+        <div class="overlay">
+          <p class="about-text" id="about-text">
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Portfolio -->
+<div pr-include-html="/session22/Demo/common/Portfolio/portfolio.html"></div>
+
+
+<!-- TEAM -->
+<div pr-include-html="/session22/Demo/common/team/team.html"></div>
+
+<!-- SERVICES -->
+
+<div class="service-swipe">
+  <div class="diffSection" id="services_section">
+    <center>
+      <p style="
+        font-size: 50px;
+        padding: 100px;
+        padding-bottom: 15px;
+        color: #2E3D49;
+      ">
+        Services
+      </p>
+    </center>
+  </div>
+  <div id="categories" style="display: block;">
+
+    <a href="#khoaHoc.html" class="product-link">
+      <div class="s-card " id="${product.id}">
+        <img src="/session22/img/IT.png" alt="${product.name}" />
+        <p>Information Technology</p>
+        <!-- <button class="add-to-cart-button" data-product-id="${product.id}">Đăng Ký</button> -->
+      </div>
+    </a>
+    <a href="#khoaHoc.html" class="product-link">
+      <div class="s-card " id="${product.id}">
+        <img src="/session22/img/EC.png" alt="${product.name}" />
+        <p>Economics</p>
+        <!-- <button class="add-to-cart-button" data-product-id="${product.id}">Đăng Ký</button> -->
+      </div>
+    </a>
+    <a href="#khoaHoc.html" class="product-link">
+      <div class="s-card " id="${product.id}">
+        <img src="/session22/img/ED.png" alt="${product.name}" />
+        <p>Education</p>
+        <!-- <button class="add-to-cart-button" data-product-id="${product.id}">Đăng Ký</button> -->
+      </div>
+    </a>
+  </div>
+  <div class="service-swipe" id="render-html">
+
+  </div>
+
+</div>
+<div pr-include-html="/session22/Demo/common/services/services.html"></div>
+
+
+
+
+<!-- CONTACT US -->
+<div pr-include-html="/session22/Demo/common/contactus/contactus.html"></div>
+
+
+<!-- FEEDBACK -->
+<div pr-include-html="/session22/Demo/common/feedback/feedback.html"></div>
+
+<!-- FOOTER -->
+<div pr-include-html="../../common/footer/footer.html"></div>
+
+
+
+<script src="/session22/Demo/common/js/menu.js"></script>
+
+<script src="/session22/Demo/common/js/includeHTML.js"></script>
+<script src="/session22/Demo/common/header/menuSide.html"></script>
+<script src="/session22/Demo/common/header/header.html"></script>
+<script src="/session22/Demo/common/header/headContainer.html"></script>
+<script src="/session22/Demo/common/About/about.html"></script>
+<script src="/session22/Demo/common/team/team.html"></script>
+<script src="/session22/Demo/common/services/services.html"></script>
+<script src="/session22/Demo/common/feedback/feedback.html"></script>
+<script src="/session22//Demo//common//contactus/"></script>
+<script>includeHTML()</script>
+
+</body>
+
+</html>

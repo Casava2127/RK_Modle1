@@ -1,0 +1,67 @@
+ /* CSS cho danh sách select */
+ .select-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#email-select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+#email-select:focus {
+    outline: none;
+    /* Loại bỏ viền màu khi focus vào select */
+}
+
+/* CSS cho danh sách sản phẩm */
+.product-list {
+    display: flex; /* Hiển thị sản phẩm hàng ngang */
+    flex-wrap: wrap; /* Ngắt dòng khi không đủ không gian */
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.product-list li {
+    flex: 1; /* Mỗi sản phẩm chiếm 1 phần bằng nhau */
+    margin-right: 10px; /* Khoảng cách giữa các sản phẩm */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+}
+
+.product-list button {
+    padding: 5px 10px;
+    background-color: #ff595e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-list button:hover {
+    background-color: #ff3f3f;
+}
+
+/* Hiệu ứng dịch chuyển chậm hơn */
+.product-list li {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-list li:hover {
+    transform: scale(1.02);
+}
+body{
+     /* background-color: #9fd1e1;; */
+     
+}

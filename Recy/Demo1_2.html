@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Quản Lý Sản Phẩm</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 20px;
+		}
+		
+		h1 {
+			text-align: center;
+		}
+		
+		ul {
+			list-style: none;
+			padding: 0;
+		}
+		
+		li {
+			border: 1px solid #ccc;
+			margin: 10px;
+			padding: 10px;
+			display: flex;
+			justify-content: space-between;
+		}
+		
+		button {
+			background-color: #007BFF;
+			color: white;
+			border: none;
+			padding: 5px 10px;
+			cursor: pointer;
+		}
+		
+	</style>
+</head>
+<body>
+    <h1>Quản Lý Sản Phẩm</h1>
+    <ul id="product-list"></ul>
+    <button id="add-product">Thêm Sản Phẩm</button>
+    <script >
+
+		document.addEventListener("DOMContentLoaded", () => {
+			const productlist = document.getElementById("product-list");
+			const addProductButton = document.getElementById("add-product");
+		
+			// Lấy danh sách sản phẩm từ local storage hoặc tạo một danh sách trống
+			const products = JSON.parse(localStorage.getItem("products")) || [];
+		
+			// Hiển thị danh sách sản phẩm
+			function showProducts() {
+				productlist.innerHTML = "";
+				products.forEach((product) => {
+					const li = document.createElement("li");
+					li.innerHTML = `
+						<span>${product.name} - $${product.price}</span>
+						<button class="remove-button" data-id="${product.id}">Xóa</button>
+					`;
+					productlist.appendChild(li);
+				});
+			}
+		
+			// Thêm sản phẩm mới
+			addProductButton.addEventListener("click", () => {
+				const productName = prompt("Nhập tên sản phẩm:");
+				const productPrice = prompt("Nhập giá sản phẩm:");
+				const productId = products.length + 1; // ID sản phẩm tự tạo
+		
+				if (productName && productPrice) {
+					products.push({ id: productId, name: productName, price: parseFloat(productPrice) });
+					localStorage.setItem("products", JSON.stringify(products));
+					showProducts();
+				}
+			});
+		
+			// Xóa sản phẩm
+			productlist.addEventListener("click", (event) => {
+				if (event.target.classList.contains("remove-button")) {
+					const productId = event.target.getAttribute("data-id");
+					const updatedProducts = products.filter((product) => product.id !== parseInt(productId));
+					localStorage.setItem("products", JSON.stringify(updatedProducts));
+					showProducts();
+				}
+			});
+		
+			showProducts();
+		});
+		
+	</script>
+</body>
+</html>

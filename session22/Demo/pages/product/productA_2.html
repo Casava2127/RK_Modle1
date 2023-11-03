@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Table</title>
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Category ID</th>
+                <!-- <th>Image</th> -->
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody id="productTableBody">
+        </tbody>
+    </table>
+
+    <script>
+        // Lấy dữ liệu từ Local Storage
+        const productsQ1 = JSON.parse(localStorage.getItem('productsQ1')) || [];
+        const uCard = JSON.parse(localStorage.getItem('U-card')) || [];
+
+        // Tạo một đối tượng để lưu trữ số lượng của mỗi sản phẩm
+        const productQuantities = {};
+
+        // Đếm số lượng sản phẩm dựa trên U-card
+        uCard.forEach((card) => {
+            const productId = card.productId;
+            productQuantities[productId] = (productQuantities[productId] || 0) + 1;
+        });
+
+        // Hiển thị sản phẩm và số lượng trong bảng
+        const tableBody = document.getElementById("productTableBody");
+        productsQ1.forEach((product) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${product.id}</td>
+                <td>${product.name}</td>
+                <td>${product.category_id}</td>
+              
+                <td>${productQuantities[product.id] || 0}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+    </script>
+</body>
+</html>

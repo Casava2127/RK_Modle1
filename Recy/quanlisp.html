@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang web bán hàng</title>
+</head>
+<body>
+    <h1>Giỏ hàng</h1>
+    <div id="product-list"></div>
+    <button id="add-product">Thêm sản phẩm</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const productlist = document.getElementById("product-list");
+            const addProductButton = document.getElementById("add-product");
+
+            // Lấy danh sách sản phẩm từ local storage hoặc tạo một danh sách trống
+            const products = JSON.parse(localStorage.getItem("UCo-card")) || [];
+
+            // Hiển thị danh sách sản phẩm
+            function showProducts() {
+                productlist.innerHTML = "";
+                products.forEach((product) => {
+                    const li = document.createElement("li");
+                    li.innerHTML = `
+                        <span>${product.email} - ${product.productId}</span>
+                        <button class="remove-button" data-id="${product.productId}">Xóa</button>
+                    `;
+                    productlist.appendChild(li);
+                });
+            }
+
+            // Thêm sản phẩm mới
+            addProductButton.addEventListener("click", () => {
+                const email = prompt("Nhập email:");
+                const productId = prompt("Nhập product_Id:");
+
+                if (email && productId) {
+                    products.push({ email: email, productId: productId });
+                    localStorage.setItem("UCo-card", JSON.stringify(products));
+                    showProducts();
+                }
+            });
+
+            // Xóa sản phẩm
+            productlist.addEventListener("click", (event) => {
+                if (event.target.classList.contains("remove-button")) {
+                    const productId = event.target.getAttribute("data-id");
+                    removeFromLocalStorage(productId);
+                }
+            });
+
+            function removeFromLocalStorage(productId) {
+                // Tìm sản phẩm cần xóa trong danh sách
+                const updatedProducts = products.filter((product) => product.productId !== productId);
+                localStorage.setItem("UCo-card", JSON.stringify(updatedProducts));
+                showProducts();
+            }
+
+            showProducts();
+        });
+    </script>
+</body>
+</html>

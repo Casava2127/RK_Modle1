@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #suggestions {
+            display: none;
+            position: absolute;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            max-height: 150px;
+            overflow-y: auto;
+            width: 100%;
+          }
+          
+          #suggestions a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 10px;
+            transition: background-color 0.3s;
+          }
+          
+          #suggestions a:hover {
+            background-color: #f0f0f0;
+          }
+          
+          
+    </style>
+</head>
+<body>
+    <input type="text" id="searchInput" placeholder="Tìm kiếm">
+    <div id="suggestions"></div>
+    
+<script>
+    const searchInput = document.getElementById("searchInput");
+    const suggestions = document.getElementById("suggestions");
+    
+    // Một danh sách gợi ý ví dụ (có thể lấy từ dữ liệu thực tế)
+    const suggestionList = [
+      { title: "Google", url: "https://www.google.com" },
+      { title: "Facebook", url: "https://www.facebook.com" },
+      { title: "Twitter", url: "https://www.twitter.com" },
+      // Thêm các mục gợi ý khác ở đây
+    ];
+    
+    // Xử lý khi người dùng nhập vào ô tìm kiếm
+    searchInput.addEventListener("input", function() {
+      const searchValue = searchInput.value.toLowerCase();
+      const filteredSuggestions = suggestionList.filter(suggestion => suggestion.title.toLowerCase().includes(searchValue));
+    
+      // Hiển thị gợi ý nếu có kết quả
+      if (filteredSuggestions.length > 0) {
+        suggestions.style.display = "block";
+        suggestions.innerHTML = "";
+        filteredSuggestions.forEach(suggestion => {
+          const suggestionItem = document.createElement("a");
+          suggestionItem.textContent = suggestion.title;
+          suggestionItem.href = suggestion.url;
+          suggestions.appendChild(suggestionItem);
+        });
+      } else {
+        suggestions.style.display = "none";
+      }
+    });
+    
+    // Ẩn gợi ý khi người dùng click ra ngoài ô tìm kiếm
+    document.addEventListener("click", function(event) {
+      if (event.target !== searchInput) {
+        suggestions.style.display = "none";
+      }
+    });
+    
+</script>
+</body>
+</html>

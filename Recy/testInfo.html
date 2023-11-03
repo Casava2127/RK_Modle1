@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown Example</title>
+</head>
+<body>
+  <select class="form-select" style="width: 150px; margin-bottom: 10px;" aria-label="Default select example" id="dropdown">
+    <option selected>Information</option>
+    <option value="my-account">My Account</option>
+    <option value="change-password">Change Password</option>
+    <option value="log-out">Log Out</option>
+  </select>
+
+  <script>
+    // Lấy thẻ select
+    const dropdown = document.getElementById('dropdown');
+
+    // Lắng nghe sự kiện change
+    dropdown.addEventListener('change', function() {
+      const selectedOption = dropdown.options[dropdown.selectedIndex];
+
+      if (selectedOption.value === 'log-out') {
+        // Nếu người dùng chọn "Log Out", load lại trang web hiện tại
+        window.location.reload();
+      } else if (selectedOption.value === 'my-account') {
+        // Nếu người dùng chọn "My Account", chuyển đến trang My Account
+        window.location.href = 'my-account.html';
+      } else if (selectedOption.value === 'change-password') {
+        // Nếu người dùng chọn "Change Password", chuyển đến trang Change Password
+        window.location.href = 'change-password.html';
+      }
+    });
+  </script>
+</body>
+</html>

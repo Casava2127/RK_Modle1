@@ -1,0 +1,100 @@
+
+body {
+    /* background: url("https://storage.googleapis.com/blog-images-backup/0*I-sI3u34g0ydRqyA"); */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+  }
+    
+    
+    .signup-container {
+        max-width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        background: rgb(121 167 202 / 20%); /* Màu nền trong suốt */
+        border-radius: 5px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Bóng mờ */
+        text-align: center;
+        transition: background 0.3s; /* Hiệu ứng chuyển đổi màu nền */
+    }
+    
+    .signup-container:hover {
+      background: rgba(42, 63, 73, 0.61); /* Màu nền trong suốt khi hover */
+    
+        
+    }
+    
+    h1 {
+        color: #212529;
+      }
+    
+    form {
+        text-align: left;
+    }
+    
+    .form-group {
+        margin: 20px 0;
+    }
+    
+    label {
+        display: block;
+        font-weight: 600;
+        color: #212529;
+    }
+    
+    input {
+        width: 95%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    .show-password {
+        cursor: pointer;
+        color: #007bff;
+    }
+    
+    input[type="submit"] {
+        background-color: #212529;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    p {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #212529;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #679fd8
+    }
+    
+    .social-buttons {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+    
+    button.facebook,
+    button.google {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    
+    button.facebook:hover,
+    button.google:hover {
+        background-color: #7a8086;
+    }
+    
+    

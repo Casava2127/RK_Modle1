@@ -1,0 +1,74 @@
+/* productU.css */
+
+/* Thiết lập font chữ và màu chung */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    /* background: url("https://storage.googleapis.com/blog-images-backup/0*I-sI3u34g0ydRqyA"); */
+   
+  }
+  
+  /* Phần header */
+  h1 {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  /* Danh sách sản phẩm */
+  #product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    list-style: none;
+  }
+  
+  /* Mỗi sản phẩm */
+  .product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.2s;
+  }
+  
+  .product:hover {
+    transform: scale(1.05);
+  }
+  
+  .product img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .product h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .product p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Địa chỉ email người dùng */
+  #user-email {
+    text-align: center;
+    padding: 10px;
+    background-color: #10668b;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  li{
+    margin: 10px ;
+  }
